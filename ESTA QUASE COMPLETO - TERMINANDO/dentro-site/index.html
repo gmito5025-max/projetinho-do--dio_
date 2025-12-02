@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VELTRIX | Serviços Futurista</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Estilos principais -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <!-- SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome para ícones do rodapé -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts para ícones do slider -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+  </head>
+  <body>
+    <!--------------------------------------------------------- HEADER ------------------------------------>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="../imagens para o site/ChatGPT Image 17 de out. de 2025, 12_37_12.png"
+          alt="logo Veltrix"
+          class="logo-img"
+        />
+      </div>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="../serviços/escolha-serviços.html">Serviços</a>
+        <a href="../Escolha de profissao especifica/Escolha-proficionais/index.html">Profissionais</a>
+        <a href="https://wa.me/5527998803770" target="_blank">Contato</a>
+      </nav>
+    </header>
+
+    <!--------------------------------------------- HERO ----------------------------------->
+    <section class="hero">
+      <h1>Encontre o profissional ideal</h1>
+      <p>
+        Rápido, fácil e seguro. Conecte-se com profissionais de confiança na sua
+        região.
+      </p>
+      <button
+        class="btn-primary"
+        onclick="window.location.href='../serviços/escolha-serviços.html'"
+      >
+        Quero contratar um serviço
+      </button>
+    </section>
+
+    <!------------------------------------------------------- PROFISSIONAIS ----------------------------------------->
+    <section class="professionals">
+      <h2>Profissionais em Destaque</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              src="../imagens para o site/man-8889170_1280.jpg"
+              alt="João Silva"
+              class="card-img"
+            />
+          </div>
+          <h3>João Silva</h3>
+          <p>Eletricista - 5 anos de experiência</p>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <button class="btn-outline">Pedir Orçamento</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              src="../imagens para o site/Cabeleireira-Tamires-Ramos-de-Indaiatuba-6-1024x1007.jpg"
+              alt="Maria Souza"
+              class="card-img"
+            />
+          </div>
+          <h3>Maria Souza</h3>
+          <p>Cabeleireira - Cortes e coloração</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <button class="btn-outline">Pedir Orçamento</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              src="../imagens para o site/iStock-1017296544-1024x683-1024x640.jpg"
+              alt="Carlos Lima"
+              class="card-img"
+            />
+          </div>
+          <h3>Carlos Lima</h3>
+         <p><br>Programador Web e Mobile </br> </p>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <button class="btn-outline">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------- SLIDER DE CARDS ------------------------------------------------->
+
+    <section class="slider-section">
+      <h2>Outros Profissionais</h2>
+      <h4>Os serviços mais realizados de cada categoria</h4>
+      <div class="container swiper">
+        <div class="card-wrapper">
+          <ul class="card-list swiper-wrapper">
+            <li class="card-item swiper-slide">
+              <a href="../serviços/pedreiro.html" class="card-link">
+                <img
+                  src="../imagens para o site/jovem-artesao-a-construir-uma-casa_1303-27969.jpg"
+                  alt="mason"
+                  class="card-image"
+                />
+                <p class="badge badge-manson">Pedreiro</p>
+                <h2 class="card-title">Serviço de Pedreiro</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a href="../serviços/marceneiro.html" class="card-link">
+                <img
+                  src="../imagens para o site/carpinteiro-cortando-placa-de-mdf-dentro-da-oficina_23-2149451066.jpg"
+                  alt="carpenter"
+                  class="card-image"
+                />
+                <p class="badge badge-carpenter">Marceneiro</p>
+                <h2 class="card-title">Serviços de Marcenaria</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a href="../serviços/limpeza.html" class="card-link">
+                <img
+                  src="../imagens para o site/contratou-uma-profissional-diarista-saiba-como-orienta-la-20171130122903.jpg-1024x686.png"
+                  alt="Housekeeper"
+                  class="card-image"
+                />
+                <p class="badge badge-Housekeeper">Diarista</p>
+                <h2 class="card-title">Serviços de Diarista</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a href="../serviços/pintor.html" class="card-link">
+                <img
+                  src="../imagens para o site/depositphotos_92118886-stock-photo-painter-in-paint-splattered-shirt.jpg"
+                  alt="painter"
+                  class="card-image"
+                />
+                <p class="badge badge-painter">Pintor</p>
+                <h2 class="card-title">Serviço de pintura</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a href="../serviços/jardineiro.html" class="card-link">
+                <img
+                  src="../imagens para o site/Dia-do-jardineiro.jpg"
+                  alt="gardener"
+                  class="card-image"
+                />
+                <p class="badge badge-gardener">Jardineiro</p>
+                <h2 class="card-title">Serviços de Jardinagem</h2>
+                <button class="card-button material-symbols-rounded">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Paginação e Navegação -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------- DOWNLOAD APP ------------------------------------------------------------>
+
+    <section class="download-app">
+      <div class="download-content">
+        <div class="download-text">
+          <h2>Faça o download do nosso aplicativo</h2>
+          <p>
+            Tenha acesso rápido aos melhores profissionais na palma da sua mão.
+          </p>
+
+          <div class="app-buttons">
+            <a href="#" class="app-btn">
+              <img
+                src="../imagens para o site/disponivel-google-play-badge-6.png"
+                alt="Google Play"
+              />
+            </a>
+            <a href="#" class="app-btn">
+              <img src="../imagens para o site/apple.png" alt="App Store" />
+            </a>
+          </div>
+        </div>
+
+        <div class="download-image">
+          <img
+            src="../imagens para o site/Foto Aplicativo 1.png"
+            alt="Aplicativo Veltrix no celular"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------------------- SEÇÃO DE RECOMENDAÇÕES ------------------------------------------------------------------------>
+    <section class="testimonials">
+      <h2>Quem contratou um Veltrixer recomenda</h2>
+      <p class="subtitle">
+        São mais de 3 milhões de clientes e profissionais felizes
+      </p>
+
+      <div class="testimonials-container">
+        <div class="testimonial fade-in">
+          <span class="quote">“</span>
+          <p class="testimonial-text">
+            Fui muito bem atendida, o profissional foi muito educado e fez um
+            trabalho de qualidade. Valeu a pena, orçamento grátis e não é
+            careiro.
+          </p>
+          <p class="testimonial-info">
+            <strong>Serviço de Pedreiro</strong> — Ana Paula<br />
+            Contratou um Pedreiro em São Mateus, ES
+          </p>
+        </div>
+
+        <div class="testimonial fade-in">
+          <span class="quote">“</span>
+          <p class="testimonial-text">
+            Os profissionais são pessoas dedicadas com seus serviços. Tudo o que
+            é pedido é feito da maneira como foi pedido. Aprovado!
+          </p>
+          <p class="testimonial-info">
+            <strong>Serviço de Assistência</strong> — Bruno Freitas<br />
+            Contratou uma Assistência em Linhares,ES
+          </p>
+        </div>
+
+        <div class="testimonial fade-in">
+          <span class="quote">“</span>
+          <p class="testimonial-text">
+            Uma excelente profissional, pontual e acima de tudo confiável. Foi
+            bastante educada e atenciosa com o trabalho, recomendo.
+          </p>
+          <p class="testimonial-info">
+            <strong>Serviço de Diarista</strong> — Renata Figueiredo<br />
+            Contratou uma Diarista em Aracruz, ES
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SEÇÃO REFORMAS ====================== -->
+    <section class="featured-card">
+      <div class="featured-container">
+        <div class="featured-img">
+          <img
+            src="../imagens para o site/retrato-de-barbeiro-em-pe-com-o-braco-cruzado.jpg"
+            alt="Profissional destaque"
+          />
+          <div class="featured-stars"></div>
+        </div>
+
+        <div class="featured-info">
+          <h2>Lucas Andrade</h2>
+          <p>Serviço de Reformas e Reparos</p>
+          <p>
+            Profissional dedicado, com mais de 8 anos de experiência em obras
+            residenciais e comerciais.
+          </p>
+          <p>Atendimento em Vitória - ES</p>
+          <button class="featured-btn">Pedir Orçamento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------------------- SEÇÃO DE RECOMENDAÇÕES ------------------------------------------------------------------------>
+    <section class="Veltrix">
+      <h2>O que é a Veltrix</h2>
+      <p class="subtitle">
+        Veltrix conecta profissionais do ES a quem precisa de serviços, com
+        rapidez e qualidade.
+      </p>
+
+      <div class="Veltrix-container">
+        <!-- Card 1 -->
+        <div class="Veltrix-card fade-in">
+          <div class="icon-container">
+            <i class="bi bi-clipboard2-check"></i>
+          </div>
+          <h2 class="card-title">Contrate o seu serviço</h2>
+          <p class="Veltrix-text">
+            Veltrix conecta profissionais de todo o ES com quem precisa de
+            serviços.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="Veltrix-card fade-in">
+          <div class="icon-container">
+            <i class="bi bi-hand-thumbs-up"></i>
+          </div>
+          <h2 class="card-title">Profissionais confiáveis</h2>
+          <p class="Veltrix-text">
+            Todos os profissionais são avaliados e aprovados por outros
+            clientes.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="Veltrix-card fade-in">
+          <div class="icon-container">
+            <i class="bi bi-clock-history"></i>
+          </div>
+          <h2 class="card-title">Rápido e eficiente</h2>
+          <p class="Veltrix-text">
+            Encontre e contrate o serviço que precisa de forma ágil e segura.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== POPUP ==== -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <img
+          src="Logo VELTRIX sobre fundo azul.png"
+         
+          class="popup-img"
+        />
+        <h2>Seja Bem-vindo</h2>
+        <p>
+          Você gostaria de <strong>prestar serviços</strong> ou
+          <strong>solicitar um serviço</strong>?
+        </p>
+        <button class="btn-primary">Sou prestador de serviços</button>
+        <button class="btn-outline">Quero encontrar um profissional</button>
+      </div>
+    </div>
+
+
+    <!------------------------------------------------ RODAPÉ SOCIAL ----------------------------------------------------------------->
+    <footer class="footer-social">
+      <div class="footer-container">
+        <div class="logo-footer">
+          <img
+            src="../imagens para o site/ChatGPT Image 17 de out. de 2025, 12_37_12.png"
+            alt="logotipo da VELTRIX"
+          />
+        </div>
+
+        <div class="socials">
+          <div class="social-btn facebook">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+          </div>
+
+          <div class="social-btn chat">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </div>
+
+          <div class="social-btn WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="footer-rights">
+          <p>© 2025 Veltrix — Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--------------------------------- SwiperJS Script ------------------------------------------------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="barra.js"></script>
+    <script src="script.js"></script>
+    <script src="seção.js"></script>
+    <script src="pop-up.js"></script>
+  </body>
+</html>
