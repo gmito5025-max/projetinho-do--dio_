@@ -40,13 +40,13 @@ navItems.forEach(item => {
         // hover normal
         item.addEventListener('mouseenter', () => {
             if (!dropdown.classList.contains('locked')) {
-                dropdown.classList.add('grid');
+                dropdown.classList.add('show');
             }
         });
 
         item.addEventListener('mouseleave', () => {
             if (!dropdown.classList.contains('locked')) {
-                dropdown.classList.remove('grid');
+                dropdown.classList.remove('show');
             }
         });
 
@@ -54,11 +54,11 @@ navItems.forEach(item => {
         icon.addEventListener('click', e => {
             e.stopPropagation();
             if (activeDropdown && activeDropdown !== dropdown) {
-                activeDropdown.classList.remove('grid', 'locked');
+                activeDropdown.classList.remove('show', 'locked');
             }
 
             const isLocked = dropdown.classList.toggle('locked');
-            dropdown.classList.toggle('grid', isLocked);
+            dropdown.classList.toggle('show', isLocked);
             activeDropdown = isLocked ? dropdown : null;
         });
     }
@@ -67,7 +67,7 @@ navItems.forEach(item => {
 // clicar fora fecha qualquer dropdown travado
 document.addEventListener('click', () => {
     if (activeDropdown) {
-        activeDropdown.classList.remove('locked', 'grid');
+        activeDropdown.classList.remove('locked', 'show');
         activeDropdown = null;
     }
 });
