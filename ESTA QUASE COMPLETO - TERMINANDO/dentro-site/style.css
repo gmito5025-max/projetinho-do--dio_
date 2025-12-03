@@ -16,73 +16,131 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 40px;
-  background-color: #081544;
-  width: 100%;
-  position: relative; /* não fixa ainda */
-  top: 0;
-  left: 0;
-  transition: all 0.4s ease; /* transição suave */
-  z-index: 999;
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e9e9e9;
+  position: relative;
+  z-index: 50;
+  padding: 18px 0;
 }
 
-.header.fixed {
-  position: fixed;
-  top: 0;
-}
-
-/* ===== LOGO ===== */
-.logo {
+/* centraliza e limita largura */
+.nav-inner {
+  width: 1140px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
   display: flex;
+  gap: 30px;
+  justify-content: flex-start;
   align-items: center;
 }
 
-/* estilo direto da imagem */
-.logo-img {
-  width: 140px; /* tamanho base */
-  height: auto; /* mantém proporção */
+/* cada item da navbar */
+.nav-item {
+  position: relative;
+  width: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 10px #60a5fa)
-    drop-shadow(0 0 20px rgba(96, 165, 250, 0.8));
-  animation: glow-logo 2s infinite alternate;
+  padding: 2px 6px;
 }
 
-/* efeito hover — tipo pulsar quando passa o mouse */
-.logo-img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 25px #60a5fa)
-    drop-shadow(0 0 40px rgba(96, 165, 250, 1));
+/* container do ícone (quadrado amarelo aparece aqui) */
+.icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms ease, transform 160ms ease;
 }
 
-/* animação de glow neon */
-@keyframes glow-logo {
-  0% {
-    filter: drop-shadow(0 0 10px #60a5fa)
-      drop-shadow(0 0 20px rgba(96, 165, 250, 0.6));
-  }
-  100% {
-    filter: drop-shadow(0 0 25px #60a5fa)
-      drop-shadow(0 0 40px rgba(96, 165, 250, 1));
-  }
+/* ícone bootstrap */
+.icon-wrap i {
+  font-size: 24px;
+  display: inline-block;
+  color: #333;
+  transition: transform 160ms ease, color 160ms ease;
 }
 
-.nav a {
-  margin-left: 20px;
-  color: #fff;
+/* label abaixo do ícone */
+.nav-item span {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* hover: quadrado azul escuro preenchido e leve elevação no ícone */
+.nav-item:hover .icon-wrap {
+  background: #163563;       /* amarelo */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(122, 120, 120, 0.06);
+}
+.nav-item:hover .icon-wrap i {
+  transform: translateY(-2px);
+  color: #f7f3f3;
+}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: 780px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 22px;
+  display: grid; /* deixa flex por padrão */
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* colunas internas */
+.dropdown-menu .col h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #222;
+}
+.dropdown-menu .col a {
+  display: block;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 14px;
+  color: #555;
+  padding: 6px 0;
+  transition: color 160ms ease, transform 160ms ease;
+}
+.dropdown-menu .col a:hover {
+  color: #000;
+  transform: translateX(6px);
 }
 
-.nav a:hover {
-  color: #60a5fa;
+/* sombra leve no topo para simular recorte */
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -18px;
+  height: 18px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.02), transparent);
+  pointer-events: none;
 }
+
 
 /* ===== HERO ===== */
 .hero {
